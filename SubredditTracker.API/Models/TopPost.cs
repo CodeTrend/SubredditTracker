@@ -6,6 +6,8 @@ namespace SubredditTracker.API.Models
     {
         public required string PostTitle { get; set; }
         public int UpvoteCount { get; set; }
+        public required string PostUrl { get; set; }
+        
     }
 }
 

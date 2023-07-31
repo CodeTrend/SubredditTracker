@@ -1,7 +1,5 @@
-﻿using System;
-using SubredditTracker.API.Models;
+﻿using SubredditTracker.API.Models;
 using SubredditTracker.Domain.Interfaces;
-using SubredditTracker.Domain;
 using SubredditTracker.API.Services;
 using SubredditTracker.API.Interfaces;
 

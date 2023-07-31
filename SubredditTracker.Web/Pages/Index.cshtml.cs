@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SubredditTracker.Web.Pages;
 
@@ -20,8 +19,6 @@ public class IndexModel : PageModel
     public async Task OnPostAsync()
     {
         var subredditToTrack = Request.Form["subredditToTrack"];
-        //start watching the subreddit
-        //
     }
 }
 

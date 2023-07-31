@@ -1,34 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.API/SubredditTracker.API.csproj": {}
+    "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.API\\SubredditTracker.API.csproj": {}
   },
   "projects": {
-    "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.API/SubredditTracker.API.csproj": {
+    "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.API\\SubredditTracker.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.API/SubredditTracker.API.csproj",
+        "projectUniqueName": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.API\\SubredditTracker.API.csproj",
         "projectName": "SubredditTracker.API",
-        "projectPath": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.API/SubredditTracker.API.csproj",
-        "packagesPath": "/Users/madhan/.nuget/packages/",
-        "outputPath": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.API/obj/",
+        "projectPath": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.API\\SubredditTracker.API.csproj",
+        "packagesPath": "C:\\Users\\madhan.d\\.nuget\\packages\\",
+        "outputPath": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/madhan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\madhan.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/SubredditTracker.Domain.csproj": {
-                "projectPath": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/SubredditTracker.Domain.csproj"
+              "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\SubredditTracker.Domain.csproj": {
+                "projectPath": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\SubredditTracker.Domain.csproj"
               }
             }
           }
@@ -43,6 +48,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Esendex.TokenBucket": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.9, )"
@@ -79,26 +88,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/SubredditTracker.Domain.csproj": {
+    "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\SubredditTracker.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/SubredditTracker.Domain.csproj",
+        "projectUniqueName": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\SubredditTracker.Domain.csproj",
         "projectName": "SubredditTracker.Domain",
-        "projectPath": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/SubredditTracker.Domain.csproj",
-        "packagesPath": "/Users/madhan/.nuget/packages/",
-        "outputPath": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/obj/",
+        "projectPath": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\SubredditTracker.Domain.csproj",
+        "packagesPath": "C:\\Users\\madhan.d\\.nuget\\packages\\",
+        "outputPath": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/madhan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\madhan.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

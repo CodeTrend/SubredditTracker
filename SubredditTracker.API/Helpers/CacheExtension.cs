@@ -1,8 +1,8 @@
-﻿using SubredditTracker.API.Services;
-using SubredditTracker.Domain.Interfaces;
-
-namespace SubredditTracker.API.Helpers
+﻿namespace SubredditTracker.API.Helpers
 {
+    using SubredditTracker.API.Services;
+    using SubredditTracker.Domain.Interfaces;
+
     public static class CacheExtension
     {
         public static IServiceCollection ConfigureCache(this IServiceCollection service)

@@ -1,5 +1,4 @@
-﻿using System;
-namespace SubredditTracker.Domain.Interfaces
+﻿namespace SubredditTracker.Domain.Interfaces
 {
     public interface ICachingService
     {

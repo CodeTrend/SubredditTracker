@@ -6,6 +6,7 @@
 	{
         Task PostsReceived(IEnumerable<ITopPost> message);
         Task UsersReceived(IEnumerable<ITopUser> message);
+        Task Error(string message);
     }
 }
 

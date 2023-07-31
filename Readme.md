@@ -1,29 +1,28 @@
-﻿Overview
+﻿# Subreddit Tracker
 
-Screenshot of the finished product
+## Overview
+Subreddit Tracker helps to track the most up voted posts in a given subreddit.
 
-Usage
-How a new developer should run this code and see the output?
+## Feature
 
-Swagger URL for API: https://localhost:7154/swagger/index.html
-Application URL: https://localhost:7152/
-
-
-Basic Architecture
-
-Solution Projects
+- Start Tracking a Subreddit
+- Stop Tracking a Subreddit
+- Automatic update of lated upvotes via Signalr. No need to refresh your page.
 
 
-Feedback
+## Project 
 
-How to raise a question or provide feedback
-
-
-FAQ's
+[Client Web App]<------signalr------>[API + BackgroundService]-----polling---->[Reddit API]
 
 
+## Installation
+1. Update the value for reddit ApplicationId, ApplicationSecret in the below file
+\SubredditTracker\SubredditTracker.API\appsettings.json
+2. Run the application.
+3. Enter the "subreddit name" you wanted to track. And click on "Start Tracking"
+ 
+## FAQ
+Why it is giving a popup with error message?
+1. Recheck your applicationsettings.json for reddit credentials
+2. Reddit might ban some subreddits, try a different one.
 
-https://stackedit.io/app#
-
-
-Calling signal R from UI https://www.youtube.com/watch?v=JuWV0RBdu2k

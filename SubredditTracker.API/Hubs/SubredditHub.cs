@@ -1,16 +1,12 @@
 ﻿
 namespace SubredditTracker.API.Hubs
 {
-    using System;
     using Microsoft.AspNetCore.SignalR;
     using SubredditTracker.Domain.Interfaces;
-    using SubredditTracker.API.Interfaces;
+    using Interfaces;
 
     public class TrackingHub : Hub<ITrackingHubClient>
     {
-		public TrackingHub()
-		{
-        }
 
         public async Task SendPostInfo(IEnumerable<ITopPost> message)
         {
@@ -20,6 +16,10 @@ namespace SubredditTracker.API.Hubs
         public async Task SendUserInfo(IEnumerable<ITopUser> message)
         {
             await Clients.All.UsersReceived(message);
+        }
+        public async Task Error(string message)
+        {
+            await Clients.All.Error(message);
         }
     }
 }

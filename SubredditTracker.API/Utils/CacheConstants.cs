@@ -1,5 +1,4 @@
-﻿using System;
-namespace SubredditTracker.API.Utils
+﻿namespace SubredditTracker.API.Utils
 {
 	public static class CacheConstants
 	{

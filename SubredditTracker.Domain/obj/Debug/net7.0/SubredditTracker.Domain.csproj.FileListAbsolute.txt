@@ -1,0 +1,12 @@
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\bin\Debug\net7.0\SubredditTracker.Domain.deps.json
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\bin\Debug\net7.0\SubredditTracker.Domain.dll
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\bin\Debug\net7.0\SubredditTracker.Domain.pdb
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.csproj.AssemblyReference.cache
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.AssemblyInfoInputs.cache
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.AssemblyInfo.cs
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.csproj.CoreCompileInputs.cache
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.dll
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\refint\SubredditTracker.Domain.dll
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\SubredditTracker.Domain.pdb
+C:\Client\GL\SubredditTracker\SubredditTracker.Domain\obj\Debug\net7.0\ref\SubredditTracker.Domain.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yPR1wTT/l3D0OQMXTmY7iTKyvho7g4rWC7L7GyGddd7qDoahcwrrarOLfeNlf6nJsTpDzNh8vJPJ+X0B2b/5pw==",
+  "dgSpecHash": "9+QT0Z7i+ClbFL5pCSV/cPXjDroRtZK84R6xRD1x0hT0h5Lp4+4sIG9/cb3wH6Sfc1j9rAQkewbanQNhAjL65g==",
   "success": true,
-  "projectFilePath": "/Users/madhan/Documents/SubreddittTracker/SubreddittTracker/SubredditTracker.Domain/SubredditTracker.Domain.csproj",
+  "projectFilePath": "C:\\Client\\GL\\SubredditTracker\\SubredditTracker.Domain\\SubredditTracker.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

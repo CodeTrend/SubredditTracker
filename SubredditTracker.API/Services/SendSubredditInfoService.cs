@@ -1,11 +1,8 @@
-﻿using System;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using SubredditTracker.Domain.Interfaces;
 using SubredditTracker.API.Interfaces;
 using SubredditTracker.API.Hubs;
-using SubredditTracker.API.Models;
-using SubredditTracker.Domain;
-using System.Threading;
+using Esendex.TokenBucket;
 
 namespace SubredditTracker.API.Services
 {
@@ -15,6 +12,9 @@ namespace SubredditTracker.API.Services
         private readonly ILogger<SendSubredditInfoService> _logger;
         private readonly ICachingService _cache;
         private readonly IRedditDataService _reddit;
+        private const int _generalDelay = 1 * 10 * 1000;
+        private const int _noOfPostsToLoad = 25;
+
         public SendSubredditInfoService(IHubContext<TrackingHub, ITrackingHubClient> hubContext, IRedditDataService reddit, ICachingService cache, ILogger<SendSubredditInfoService> logger)
         {
             _hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
@@ -24,31 +24,46 @@ namespace SubredditTracker.API.Services
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            await Task.Delay(2000);
-            if (_cache.TryGetValue(SubredditTracker.API.Utils.CacheConstants.SubRedditKey, out string subreddit))
+            var bucket = TokenBuckets.Construct()
+                  .WithCapacity(1)
+                  .WithFixedIntervalRefillStrategy(1, TimeSpan.FromSeconds(1))
+                  .Build();
+
+            while (!stoppingToken.IsCancellationRequested)
             {
 
-                while (!stoppingToken.IsCancellationRequested)
+
+                await Task.Delay(_generalDelay, stoppingToken);
+                await BroadcastSubredditInfo(stoppingToken, bucket);
+            }
+        }
+
+        private async Task<string> BroadcastSubredditInfo(CancellationToken stoppingToken, ITokenBucket bucket)
+        {
+            if (_cache.TryGetValue(SubredditTracker.API.Utils.CacheConstants.SubRedditKey, out string subreddit))
+            {
+                bucket.Consume(1);
+                Task<IEnumerable<ITopPost>> taskPost = Task.Run(async () => { return await _reddit.GetTopUpvotedPostAsync(subreddit, _noOfPostsToLoad, stoppingToken); });
+                _ = taskPost.ContinueWith(async (posts) =>
                 {
-                    //var posts = await _reddit.GetTopUpvotedPostAsync(subreddit, 5, stoppingToken);
-                    //TODO:
-
-
-                    IEnumerable<ITopPost> posts = new List<TopPost>
+                    if (posts.Status == TaskStatus.RanToCompletion)
                     {
-                        new TopPost() { PostTitle = "Hello", UpvoteCount = 10 },
-                        new TopPost() { PostTitle = "Bye", UpvoteCount = 11 }
-                    };
+                        await _hubContext.Clients.All.PostsReceived(posts.Result);
+                    }
+                    else
+                    {
+                        await _hubContext.Clients.All.Error(posts == null || posts.Exception == null? "Application Error. Please check your configuration.": posts.Exception.Message);
+                    }
 
-                    await _hubContext.Clients.All.PostsReceived(posts);
-                }
+                });
             }
             else
             {
                 _logger.LogInformation("No Subreddits!!!");
             }
-            await Task.Delay(15000);
+
+            return await Task.FromResult("Done");
         }
     }
-}
 
+}

@@ -13,17 +13,14 @@ namespace SubredditTracker.API.Services
     internal class RedditAuthenticatorService : IApiAuthenticator
     {
         private readonly RedditApiOptions _redditOptions;
-        private readonly UserCredentials _userCredentials;
         private readonly HttpClient _httpClient;
 
         public RedditAuthenticatorService(
             IOptions<RedditApiOptions> options,
-            HttpClient httpClient,
-            IOptions<UserCredentials> userCredentialsOptions)
+            HttpClient httpClient)
         {
             _redditOptions = options.Value ?? throw new ArgumentNullException(nameof(options));
             _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
-            _userCredentials = userCredentialsOptions.Value ?? throw new ArgumentNullException(nameof(userCredentialsOptions));
         }
 
         public async Task<RedditToken> GetAccessToken(CancellationToken cancellationToken)

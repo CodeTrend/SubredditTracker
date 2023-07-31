@@ -4,42 +4,39 @@
     ViewData["Title"] = "Home page";
 }
 
+<div class="row">
+    <div class="text-center">
+        <h1 class="display-4">Subreddit Tracker</h1>
+        <p>You can use this <a href="https://redditcharts.com/">link</a> to help identify one that interests you.</p>
 
-<div class="text-center">
-    <h1 class="display-4">Subreddit Tracker</h1>
-    <p>You can use this <a href="https://redditcharts.com/">link</a> to help identify one that interests you.</p>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">https://www.reddit.com/r/</span>
+            </div>
 
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon3">https://www.reddit.com/r/</span>
-        </div>
+            <input id="subredditToTrack" name="subredditToTrack" type="text" class="form-control" placeholder="Enter the subreddit name to track" />
 
-        <input id="subredditToTrack" name="subredditToTrack" type="text" class="form-control" placeholder="Enter the subreddit name to track" />
-
-        <div class="input-group-append">
-            <button class="btn btn-primary" id="start-tracking">Start Tracking</button>
-            <button class="btn btn-danger" id="stop-tracking">Stop Tracking</button>
+            <div class="input-group-append">
+                <button class="btn btn-primary" id="start-tracking">Start Tracking</button>
+                <button class="btn btn-danger" id="stop-tracking">Stop Tracking</button>
+            </div>
         </div>
     </div>
-
 </div>
 
 
+
 <div class="row" id="root-container-result">
-    <div class="col-xs-6">
-        <h2 class="sub-header">Posts</h2>
+    <div class="col-12">
+        <h2 class="sub-header">All time - Trending Posts</h2><span> (Refreshes Automatically) </span>
         <div class="table-responsive">
-            <table id="tbl-subreddit-post" class="table table-striped" border="0">
-                <thead></thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
-    <div class="col-xs-6">
-        <h2 class="sub-header">Users</h2>
-        <div class="table-responsive">
-            <table id="tbl-subreddit-users" class="table table-striped" border="0">
-                <thead></thead>
+            <table id="tbl-subreddit-post" class="table table-striped" border="0" style="width:auto;">
+                <thead>
+                    <tr>
+                        <th>Post Title</th>
+                        <th>Upvote Count</th>
+                    </tr>
+                </thead>
                 <tbody></tbody>
             </table>
         </div>
@@ -51,10 +48,3 @@
 <div id="received-users"></div>
 
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
-@*<script src="~/js/site.js"></script>*@
-
-@*Free API access rates are as follows:
-
-    100 queries per minute per OAuth client id if you are using OAuth authentication
-
-    10 queries per minute if you are not using OAuth authentication*@
