@@ -9,6 +9,8 @@ Subreddit Tracker helps to track the most up voted posts in a given subreddit.
 - Stop Tracking a Subreddit
 - Automatic update of lated upvotes via Signalr. No need to refresh your page.
 
+##Applicaiton Screenshot
+![Subreddit Tracker](https://github.com/CodeTrend/SubredditTracker/blob/main/application-demo-image.png)
 
 ## Project 
 
