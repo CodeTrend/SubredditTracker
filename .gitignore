@@ -1,0 +1,10 @@
+/SubredditTracker.API/bin/
+/SubredditTracker.API/obj/
+/.vs/
+/SubredditTracker.API.Tests/bin/
+/SubredditTracker.API.Tests/obj/
+/SubredditTracker.Web/obj/
+/SubredditTracker.Web/bin/
+/SubredditTracker.API.Tests/obj/
+/SubredditTracker.Domain/obj/
+/SubredditTracker.Domain/bin/
